@@ -1,9 +1,16 @@
 # Semester-Template
-A template repo to setup a university semesters worth of course. Follow the TODO list below to get everything setup, and fork the Repo to suit you if you want to create your own template. **KEEP IN MIND, by default the .gitignore file makes the system ignore everything kept in the following folders:** ```
-/Assignments    /Handouts    /Readings``` see the last point in the **course todo** for details on how to get this to work.
+A template repo to setup a university semesters worth of course. Follow the TODO list below to get everything setup, and fork the Repo to suit you if you want to create your own template. **KEEP IN MIND, by default the .gitignore file makes the system ignore everything kept in the following folders:** 
+```
+/Assignments
+/Handouts
+/Readings
+``` 
+
+see the last point in the **course todo** for details on how to get this to work.
 
 
 ## TODO
+- [ ] Download [obsidian](https://obsidian.md/) and import this folder as a valult (optional, but recommended for all features to work).
 - [ ] Add course list to [Courses section](#courses)
 - [ ] Delete unnecessary months from [Assignment due dates & Important dates](#assignment-due-dates--important-dates) & the [Table of contents](#table-of-contents)
 - [ ] Add an image of your schedule (as a .png file) to the main directory and call it ```schedule.png``` or delete that section
@@ -88,3 +95,10 @@ You can use any format for this section, but I would recommend going in order of
 ### December
 
 1st - This item is due
+
+## Recent Files
+\**Only works when using obsidian with all the plugins enabled*
+
+```dataview 
+TABLE dateformat(file.mtime, "dd.MM.yyyy - HH:mm") AS "Last modified", link(file.link, file.path) as "File Path" FROM "" SORT file.mtime DESC LIMIT 25 
+```
